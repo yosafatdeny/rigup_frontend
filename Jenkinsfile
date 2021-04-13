@@ -75,7 +75,7 @@ pipeline {
     // } 
 
     //stage sembilan
-    stage ('deploy rigup app to kubernetes cluster'){
+    stage ('deploy app to kubernetes cluster'){
       steps{    
         sh "chmod +x changeTag.sh"
         sh "./changeTag.sh ${DOCKER_TAG}"
