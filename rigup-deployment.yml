@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rigup-app
+  labels:
+    name: rigup-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      name: rigup-app
+  template:
+    metadata:
+      name: rigup-app
+      labels:
+        name: rigup-app
+    spec:
+      containers:
+        - name: rigup-app
+          image: yosafatdeny/rigup_frontend:tagVersion
+          ports: 
+            - containerPort: 80
+
+# ---
+
+# apiVersion: v1
+# kind: Service
+# metadata:
+#   name: rigup-app-service
+# spec:
+#   type: LoadBalancer
+#   selector:
+#     name: rigup-app
+#   ports:
+#     - port: 80
+#       targetPort: 80
+    
+    
