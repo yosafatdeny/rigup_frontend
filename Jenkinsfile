@@ -2,13 +2,13 @@ pipeline {
   agent any
 
   environment{
-    // CI = true
+    CI = false
     DOCKER_TAG = getDockerTag()
   }
 
   stages {
     
-    stage ('Install Dependencies react project'){
+    stage ('Install Dependencies rigup project'){
       steps{
         echo "Starts install dependencies rigup project"
         sh "npm install"
@@ -25,7 +25,7 @@ pipeline {
     } 
 
     //stage tiga
-    stage ('Build react project'){
+    stage ('Build rigup project'){
       steps{    
         sh 'npm run build'
       }
