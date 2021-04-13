@@ -59,7 +59,7 @@ pipeline {
     stage ('push image to registry'){
       steps{    
         script{
-          docker.withRegistry("https://registry.hub.docker.com", "project-rigup"){
+          docker.withRegistry("https://registry.hub.docker.com", "credentials-docker"){
             app.push("${DOCKER_TAG}")
             app.push("latest")    
           }    
