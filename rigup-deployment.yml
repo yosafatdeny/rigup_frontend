@@ -1,22 +1,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: rigup-app
-  labels:
-    name: rigup-app
+  name: deploy-frontend
+  labels: 
+    app: rigup_app
+    type: frontend
 spec:
   replicas: 2
   selector:
     matchLabels:
-      name: rigup-app
+      app: rigup_app
   template:
     metadata:
-      name: rigup-app
-      labels:
-        name: rigup-app
+      name: deploy-frontend
+      labels: 
+        app: rigup_app
+        type: frontend
     spec:
       containers:
-        - name: rigup-app
+        - name: deploy-frontend
           image: yosafatdeny/rigup_frontend:tagVersion
           ports: 
             - containerPort: 80
