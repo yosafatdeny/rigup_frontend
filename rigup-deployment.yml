@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: deploy-frontend
+  name: rigup-app
   labels:
     name: rigup-app
 spec:
