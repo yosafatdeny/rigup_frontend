@@ -19,7 +19,7 @@ spec:
         type: frontend
     spec:
       containers:
-        - name: deploy-frontend
+        - name: rigup-frontend
           image: yosafatdeny/rigup_frontend:tagVersion
           ports: 
             - containerPort: 80
