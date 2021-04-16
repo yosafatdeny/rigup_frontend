@@ -24,7 +24,7 @@ class Home extends React.Component {
                     onClick={() => this.props.history.push('/store')}
                 >
                     <div className="title" onMouseOver={this.onMouseOverSide}>
-                        <p>Take me to the moooon</p>
+                        <p>Take me to the moon</p>
                         <div className="jumbo" >S T O R E</div>
                     </div>
                     <div className="iconMouseContainer">
