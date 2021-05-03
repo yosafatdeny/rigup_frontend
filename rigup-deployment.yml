@@ -5,7 +5,7 @@ metadata:
   labels: 
     app: rigup_app
     type: frontend
-  namespace: project-namespace
+  namespace: yosafat-project
 spec:
   replicas: 2
   selector:
