@@ -33,7 +33,7 @@ class Home extends React.Component {
                 </div>
                 <div
                     className={`rightContainer ${this.state.clicked ? '' : `show`}`}
-                    onClick={() => this.props.history.push('/build')}
+                    onClick={() => this.props.history.push('/build')} 
                 >
                     <div className="title" onMouseOver={this.onMouseOverSide}>
                         <p>I'm ready to</p>
