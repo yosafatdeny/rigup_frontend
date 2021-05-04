@@ -59,7 +59,7 @@ pipeline {
     stage ('push image to registry'){
       steps{    
         script{
-          docker.withRegistry("https://registry.hub.docker.com", "credentials-docker"){
+          docker.withRegistry("https://registry.hub.docker.com", "dockerhub"){
             app.push("${DOCKER_TAG}")
             app.push("latest")    
           }    
@@ -79,7 +79,7 @@ pipeline {
       steps{    
         sh "chmod +x changeTag.sh"
         sh "./changeTag.sh ${DOCKER_TAG}"
-        withKubeConfig([credentialsId: 'kubeconfig-rigup', serverUrl: 'https://34.101.71.208']){
+        withKubeConfig([credentialsId: 'kubeconfig-rigup', serverUrl: 'https://34.101.70.137']){
           sh 'kubectl apply -f rigup-config.k8s.yaml'    
         }      
       }    
